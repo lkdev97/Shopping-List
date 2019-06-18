@@ -23,6 +23,7 @@ function registerEvents() {
 
 function addList() {
     shoppingList.classList.remove('is--hidden');
+    sendRequestGET('/listhtml');
 }
 
 function addArticle() {

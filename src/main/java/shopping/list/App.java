@@ -20,5 +20,10 @@ public class App {
             System.out.println("Speichern!");
             if(ListManager.listAvailable(ctx.queryParam("name"))) ListManager.addList(ctx.queryParam("name"));
         });
+
+        app.get("/listhtml", ctx -> {
+            System.out.println("HTML holen");
+            HTMLGenerator.getListHTML();
+        });
     }
 }
