@@ -22,7 +22,7 @@ function registerEvents() {
 }
 
 function addList() {
-    shippingList.classList.remove('is--hidden');
+    shoppingList.classList.remove('is--hidden');
 }
 
 function addArticle() {
@@ -31,5 +31,5 @@ function addArticle() {
 
 function saveShoppingList() {
     console.log("save");
-    sendRequestGET('/save');
+    sendRequestGET('/save', 'listName=' + document.getElementById("list-name").value);
 }

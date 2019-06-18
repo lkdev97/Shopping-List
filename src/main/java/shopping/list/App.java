@@ -18,7 +18,7 @@ public class App {
 
         app.get("/save", ctx -> {
             System.out.println("Speichern!");
-            ListManager.addList(ctx.queryParam("name"));
+            if(ListManager.listAvailable(ctx.queryParam("name"))) ListManager.addList(ctx.queryParam("name"));
         });
     }
 }

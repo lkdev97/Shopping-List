@@ -16,4 +16,9 @@ public class ListManager {
         
         return List;
     }
+
+    public static boolean listAvailable(String name) {
+
+        return true;
+    }
 }
