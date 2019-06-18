@@ -3,12 +3,22 @@
  */
 package shopping.list;
 
+import io.javalin.Javalin;
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Javalin app = Javalin.create()
+            .enableStaticFiles("/public")
+            .start(80);
+        
+        app.get("getArticle", ctx -> {
+
+        });
+
+        app.get("/save", ctx -> {
+            System.out.println("Speichern!");
+            ListManager.addList(ctx.queryParam("name"));
+        });
     }
 }
