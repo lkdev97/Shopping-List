@@ -15,7 +15,7 @@ public class App {
         app.get("getArticle", ctx -> {
 
         });
-
+ 
         app.get("/save", ctx -> {
             System.out.println("Speichern!");
             if(ListManager.listAvailable(ctx.queryParam("name"))) ListManager.addList(ctx.queryParam("name"));

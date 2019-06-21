@@ -5,15 +5,18 @@ let saveBtn;
 
 //Startpunkt
 document.addEventListener('DOMContentLoaded', () => {
+    console.log("success");
+    
+    initUI();
+    registerEvents();
+});
+
+function initUI() {
     addListBtn = document.getElementById("add-list");
     addArticleBtn = document.getElementById("add-article");
     shoppingList = document.getElementById("shopping-list");
     saveBtn = document.getElementById("save");
-
-    console.log("success");
-    
-    registerEvents();
-});
+}
 
 function registerEvents() {
     addListBtn.addEventListener('click', addList);
