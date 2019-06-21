@@ -12,18 +12,8 @@ public class App {
             .enableStaticFiles("/public")
             .start(80);
         
-        app.get("getArticle", ctx -> {
-
-        });
- 
-        app.get("/save", ctx -> {
-            System.out.println("Speichern!");
-            if(ListManager.listAvailable(ctx.queryParam("name"))) ListManager.addList(ctx.queryParam("name"));
-        });
-
         app.get("/listhtml", ctx -> {
-            System.out.println("HTML holen");
-            HTMLGenerator.getListHTML();
+            ctx.result(HTMLGenerator.getListHTML());
         });
     }
 }

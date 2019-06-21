@@ -26,4 +26,5 @@ header {
 .shopping-list {
     border: 1px solid;
     padding: 50px;
+    margin-bottom: 5px;
 }
