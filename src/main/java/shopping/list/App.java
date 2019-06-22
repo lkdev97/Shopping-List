@@ -15,5 +15,10 @@ public class App {
         app.get("/listhtml", ctx -> {
             ctx.result(HTMLGenerator.getListHTML());
         });
+
+        app.get("/close", ctx -> {
+            HTMLGenerator.undo();
+            ctx.result(Integer.toString(HTMLGenerator.Counter));
+        });
     }
 }

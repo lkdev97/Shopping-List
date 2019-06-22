@@ -27,4 +27,14 @@ header {
     border: 1px solid;
     padding: 50px;
     margin-bottom: 5px;
+    position: relative;
+}
+
+#close {
+    color: red;
+    float: right;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
 }
