@@ -18,7 +18,15 @@ public class App {
 
         app.get("/close", ctx -> {
             HTMLGenerator.undo();
-            ctx.result(Integer.toString(HTMLGenerator.Counter));
+            //ctx.result(Integer.toString(HTMLGenerator.Counter));
+        });
+
+        app.get("/article", ctx -> {
+            ctx.result(HTMLGenerator.getArticleHTML());
+        });
+
+        app.get("/save", ctx -> {
+            System.out.println("SAVE");
         });
     }
 }

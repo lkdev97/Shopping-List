@@ -8,7 +8,7 @@ public class HTMLGenerator {
         StringBuilder listString = new StringBuilder();
 
         if(Counter < 5) {
-            listString.append(generateHTML());
+            listString.append(generateListHTML());
             Counter++;
         };
 
@@ -19,13 +19,24 @@ public class HTMLGenerator {
         Counter--;
     }
 
-    private static String generateHTML() {
-        System.out.println("Mein Counter " + Counter);
-        return "\t<div id=\"shopping-list list-"+ Counter +"\" class=\"shopping-list\">"
-                + "<span id=\"close\">X</span>"
+    public static String getArticleHTML() {
+        StringBuilder articleHTML = new StringBuilder();
+
+        articleHTML.append(generateArticleHTML());
+
+        return articleHTML.toString();
+    }
+
+    private static String generateListHTML() {
+        return "\t<div id=\"list-"+ Counter +"\" class=\"shopping-list\">"
+                + "<span id=\"close\" class=\"close\">X</span>"
                 + "<input id=\"list-name\" placeholder=\"Name des Einkaufszettels\">"
-                + "<button id=\"add-article\" type=\"button\" class=\"btn btn-secondary\">+</button>"
-                + "<button id=\"save\" type=\"button\" class=\"btn btn-success\">Speichern</button>"
+                + "<button id=\"add-article\" type=\"button\" class=\"btn btn-secondary add-article\">+</button>"
+                + "<button id=\"save\" type=\"button\" class=\"btn btn-success save\">Speichern</button>"
                 + "</div>\n";
+    }
+
+    private static String generateArticleHTML() {
+        return "\t<input>";
     }
 }

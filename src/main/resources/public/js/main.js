@@ -12,43 +12,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initUI() {
     addListBtn = document.getElementById("add-list");
-    addArticleBtn = document.getElementById("add-article");
-    shoppingList = document.getElementById("shopping-list");
-    saveBtn = document.getElementById("save");
-    closeBtn = document.getElementById("close");
+    //addArticleBtn = document.getElementById("add-article");
+    //shoppingList = document.getElementById("shopping-list");
+    //saveBtn = document.getElementById("save");
+    
+    saveBtn = document.getElementsByClassName("save");
+    closeBtn = document.getElementsByClassName("close"); 
+    addArticleBtn = document.getElementsByClassName("add-article");
 }
 
 function registerEvents() {
     addListBtn.addEventListener('click', addList);
-    addArticleBtn.addEventListener('click', addArticle);
-    saveBtn.addEventListener('click', saveShoppingList);
-    closeBtn.addEventListener('click', closeList);
+
+    registerHelper(closeBtn, "click", closeList);
+    registerHelper(saveBtn, "click", saveShoppingList);
+    registerHelper(addArticleBtn, "click", addArticle);
+}
+
+function registerHelper(el, event, fnc) {
+    for(let i = 0; i < el.length; i++) {
+        el[i].addEventListener(event, fnc);
+    }
 }
 
 function addList() {
-    // shoppingList.classList.remove('is--hidden');
+    //shoppingList.classList.remove('is--hidden');
     sendToServer('/listhtml').then((response) => {
         response.text().then(function(responseText) {
             document.getElementById("emotion").insertAdjacentHTML('beforeend', responseText);
+            registerEvents();
         })
     });
 }
 
 function closeList() {
-    sendToServer('/close').then((response) => {
-        response.text().then(function(responseText) {
-            //Divs hören nicht auf events nachdem hinzufügen und findet id nicht in document!!!
-            document.getElementById("list-" + responseText).remove();
-        })
-    });
+    sendToServer('/close');
+    document.getElementById(this.parentElement.id).remove();
 }
  
 
 function addArticle() {
-    sendToServer('')
+    sendToServer('/article').then((response) => {
+        response.text().then(function(responseText) {
+
+        })
+    });
 }
 
 function saveShoppingList() {
     console.log("save");
-    sendRequestGET('/save', 'listName=' + document.getElementById("list-name").value);
+    sendToServer("/save").then((response) => {
+        response.text().then(function(responseText) {
+
+        })
+    })
 }
