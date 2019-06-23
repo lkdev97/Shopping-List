@@ -63,7 +63,7 @@ function addArticle() {
 
 function saveShoppingList() {
     console.log("save");
-    //array to string::::::
+    //array to string !
     sendRequestGET("/save", "id=" + this.parentElement.id + "&test=" + array.join(document.getElementsByClassName("article")));
     /*sendToServer("/save").then((response) => {
         response.text().then(function(responseText) {

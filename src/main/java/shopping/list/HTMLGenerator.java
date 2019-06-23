@@ -44,6 +44,7 @@ public class HTMLGenerator {
         return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"
                 + "<span id=\"close\" class=\"close\">X</span>"
                 + "<input id=\"list-name\" placeholder=\"Name des Einkaufszettels\">"
+                + "<input id=\"article\" placeholder=\"Name des Artikels\">"
                 + "<button id=\"add-article\" type=\"button\" class=\"btn btn-secondary add-article\">+</button>"
                 + "<button id=\"save\" type=\"button\" class=\"btn btn-success save\">Speichern</button>"
                 + "</div>\n";
