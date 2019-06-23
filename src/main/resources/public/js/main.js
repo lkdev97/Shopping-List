@@ -46,24 +46,28 @@ function addList() {
 }
 
 function closeList() {
-    sendToServer('/close');
+    sendRequestGET('/close', "id=" + this.parentElement.id);
     document.getElementById(this.parentElement.id).remove();
 }
  
 
 function addArticle() {
+    me = this;
+    //TODO add popup? to add article
     sendToServer('/article').then((response) => {
         response.text().then(function(responseText) {
-
+            document.getElementById(me.parentElement.id).insertAdjacentHTML('beforeend', responseText);
         })
     });
 }
 
 function saveShoppingList() {
     console.log("save");
-    sendToServer("/save").then((response) => {
+    //array to string::::::
+    sendRequestGET("/save", "id=" + this.parentElement.id + "&test=" + array.join(document.getElementsByClassName("article")));
+    /*sendToServer("/save").then((response) => {
         response.text().then(function(responseText) {
-
+            //TODO ! alle daten an server übergeben
         })
-    })
+    })*/
 }

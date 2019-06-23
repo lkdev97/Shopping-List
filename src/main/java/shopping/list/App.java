@@ -17,6 +17,7 @@ public class App {
         });
 
         app.get("/close", ctx -> {
+            HTMLGenerator.setLastList(ctx.queryParam("id"));
             HTMLGenerator.undo();
             //ctx.result(Integer.toString(HTMLGenerator.Counter));
         });

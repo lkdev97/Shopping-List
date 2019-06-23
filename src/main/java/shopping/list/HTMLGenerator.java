@@ -4,11 +4,19 @@ public class HTMLGenerator {
 
     static int Counter = 1;
 
+    static Integer last;
+
     public static String getListHTML() {
         StringBuilder listString = new StringBuilder();
 
+        if(last != null) {
+            listString.append(generateListHTML(last));
+            last = null;
+            Counter++;
+            return listString.toString();
+        }
         if(Counter < 5) {
-            listString.append(generateListHTML());
+            listString.append(generateListHTML(Counter));
             Counter++;
         };
 
@@ -27,8 +35,13 @@ public class HTMLGenerator {
         return articleHTML.toString();
     }
 
-    private static String generateListHTML() {
-        return "\t<div id=\"list-"+ Counter +"\" class=\"shopping-list\">"
+    public static void setLastList(String id) {
+        String[] tmp = id.split("-");
+        last = Integer.parseInt(tmp[1]);
+    }
+
+    private static String generateListHTML(int id) {
+        return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"
                 + "<span id=\"close\" class=\"close\">X</span>"
                 + "<input id=\"list-name\" placeholder=\"Name des Einkaufszettels\">"
                 + "<button id=\"add-article\" type=\"button\" class=\"btn btn-secondary add-article\">+</button>"
@@ -37,6 +50,6 @@ public class HTMLGenerator {
     }
 
     private static String generateArticleHTML() {
-        return "\t<input>";
+        return "\t<p class=\"article\">Test-Artikel</p>";
     }
 }
