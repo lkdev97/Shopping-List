@@ -5,6 +5,12 @@ function sendRequestGET(path = '', query = '') {
     http.send();
 }
 
-function sendToServer(target, data = {}) {
-    return fetch(target, { method : "GET"}).then(response => response).catch(console.error);
+function sendToServer(target, query = '') {
+    return fetch(target, {body: query, method : "POST"}).then(response => response).catch(console.error);
+}
+
+http.onreadystatechange = function() {
+    if(this.readyState == 4 && this.status == 200) {
+        console.log(this);
+    }
 }

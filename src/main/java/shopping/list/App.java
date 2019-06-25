@@ -5,6 +5,8 @@ package shopping.list;
 
 import io.javalin.Javalin;
 
+
+
 public class App {
 
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class App {
             .enableStaticFiles("/public")
             .start(80);
         
-        app.get("/listhtml", ctx -> {
+        app.post("/listhtml", ctx -> {
             ctx.result(HTMLGenerator.getListHTML());
         });
 
@@ -22,8 +24,10 @@ public class App {
             //ctx.result(Integer.toString(HTMLGenerator.Counter));
         });
 
-        app.get("/article", ctx -> {
-            ctx.result(HTMLGenerator.getArticleHTML());
+        app.post("/article", ctx -> {
+            String id = ListManager.splitId(ctx.formParam("id"));
+            System.out.println(id);
+            ctx.result(HTMLGenerator.getArticleHTML(ctx.formParam("name")));
         });
 
         app.get("/save", ctx -> {

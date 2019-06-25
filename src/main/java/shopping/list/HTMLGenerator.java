@@ -27,17 +27,16 @@ public class HTMLGenerator {
         Counter--;
     }
 
-    public static String getArticleHTML() {
+    public static String getArticleHTML(String name) {
         StringBuilder articleHTML = new StringBuilder();
 
-        articleHTML.append(generateArticleHTML());
+        articleHTML.append(generateArticleHTML(name));
 
         return articleHTML.toString();
     }
 
     public static void setLastList(String id) {
-        String[] tmp = id.split("-");
-        last = Integer.parseInt(tmp[1]);
+        last = Integer.parseInt(ListManager.splitId(id));
     }
 
     private static String generateListHTML(int id) {
@@ -50,7 +49,7 @@ public class HTMLGenerator {
                 + "</div>\n";
     }
 
-    private static String generateArticleHTML() {
-        return "\t<p class=\"article\">Test-Artikel</p>";
+    private static String generateArticleHTML(String name) {
+        return "\t<p class=\"article\">"+  name +"</p>";
     }
 }

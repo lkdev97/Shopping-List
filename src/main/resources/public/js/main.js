@@ -53,8 +53,9 @@ function closeList() {
 
 function addArticle() {
     me = this;
+    console.log(this.previousSibling.value);
     //TODO add popup? to add article
-    sendToServer('/article').then((response) => {
+    sendToServer('/article', "name="+ this.previousSibling.value +"&id=" + this.parentElement.id).then((response) => {
         response.text().then(function(responseText) {
             document.getElementById(me.parentElement.id).insertAdjacentHTML('beforeend', responseText);
         })
@@ -64,7 +65,7 @@ function addArticle() {
 function saveShoppingList() {
     console.log("save");
     //array to string !
-    sendRequestGET("/save", "id=" + this.parentElement.id + "&test=" + array.join(document.getElementsByClassName("article")));
+    sendRequestGET("/save", "id=" + this.parentElement.id + "&test=test");
     /*sendToServer("/save").then((response) => {
         response.text().then(function(responseText) {
             //TODO ! alle daten an server übergeben

@@ -17,6 +17,11 @@ public class ListManager {
         return List;
     }
 
+    public static String splitId(String id) {
+        String[] tmp = id.split("-");
+        return tmp[1];
+    }
+
     public static boolean listAvailable(String name) {
 
         return true;
