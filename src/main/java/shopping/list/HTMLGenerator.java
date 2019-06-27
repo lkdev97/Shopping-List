@@ -12,11 +12,13 @@ public class HTMLGenerator {
         if(last != null) {
             listString.append(generateListHTML(last));
             last = null;
+            ListManager.addList(Counter);
             Counter++;
             return listString.toString();
         }
         if(Counter < 5) {
             listString.append(generateListHTML(Counter));
+            ListManager.addList(Counter);
             Counter++;
         };
 
@@ -35,8 +37,8 @@ public class HTMLGenerator {
         return articleHTML.toString();
     }
 
-    public static void setLastList(String id) {
-        last = Integer.parseInt(ListManager.splitId(id));
+    public static void setLastList(int id) {
+        last = id;
     }
 
     private static String generateListHTML(int id) {
@@ -50,6 +52,8 @@ public class HTMLGenerator {
     }
 
     private static String generateArticleHTML(String name) {
-        return "\t<p class=\"article\">"+  name +"</p>";
+        return "\t<div class=\"article-box\">"
+                + "<p class=\"article\">"+  name +"</p>"
+                + "</div>\n";
     }
 }

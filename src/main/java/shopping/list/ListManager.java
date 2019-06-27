@@ -1,29 +1,39 @@
 package shopping.list;
 
+import java.util.*;
+
 public class ListManager {
 
-    public static void addList(String name) {
+    private static HashMap<Integer, ArrayList<String>> ShoppingList = new HashMap<>();
+	
 
+    public static void addList(int id) {
+        ArrayList<String> article = new ArrayList<>();
+        ShoppingList.put(id, article);
     }
 
-    public static void removeList(String name) {
-
+    public static void removeList(int id) {
+        ShoppingList.remove(id);    
     }
 
-    public static String getList(String name) {
-        String List = "Todo";
-        
-        
-        return List;
+    public static ArrayList<String> getList(int id) {
+        return ShoppingList.get(id);
     }
 
-    public static String splitId(String id) {
+    public static int splitId(String id) {
         String[] tmp = id.split("-");
-        return tmp[1];
+        return Integer.parseInt(tmp[1]);
     }
 
-    public static boolean listAvailable(String name) {
+    public static boolean listAvailable(int id) {
+        return ShoppingList.containsKey(id);
+    }
 
-        return true;
+    public static boolean containsName(int id, String name) {
+        return ShoppingList.get(id).contains(name);
+    }
+
+    public static void addArticle(int id, String name) {
+        if(!containsName(id, name)) ShoppingList.get(id).add(name);
     }
 }

@@ -19,15 +19,18 @@ public class App {
         });
 
         app.get("/close", ctx -> {
-            HTMLGenerator.setLastList(ctx.queryParam("id"));
+            int id = ListManager.splitId(ctx.queryParam("id"));
+            HTMLGenerator.setLastList(id);
             HTMLGenerator.undo();
+            ListManager.removeList(id);
             //ctx.result(Integer.toString(HTMLGenerator.Counter));
         });
 
         app.post("/article", ctx -> {
-            String id = ListManager.splitId(ctx.formParam("id"));
-            System.out.println(id);
-            ctx.result(HTMLGenerator.getArticleHTML(ctx.formParam("name")));
+            int id = ListManager.splitId(ctx.formParam("id"));
+            String name = ctx.formParam("name");
+            if(!ListManager.containsName(id, name)) ctx.result(HTMLGenerator.getArticleHTML(name));
+            ListManager.addArticle(id, name);
         });
 
         app.get("/save", ctx -> {
