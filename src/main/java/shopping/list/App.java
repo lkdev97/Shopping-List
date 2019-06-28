@@ -33,8 +33,17 @@ public class App {
             ListManager.addArticle(id, name);
         });
 
-        app.get("/save", ctx -> {
-            System.out.println("SAVE");
+        app.post("/save", ctx -> {
+            ctx.result(HTMLGenerator.getListOpenHTML(ListManager.splitId(ctx.formParam("id")), ctx.formParam("name")));
+        });
+
+        app.post("/remove", ctx -> {
+            HTMLGenerator.undo();
+            ListManager.removeArticle(ListManager.splitId(ctx.formParam("id")), ctx.formParam("name"));
+        });
+
+        app.post("/open", ctx -> {
+            ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id"))));
         });
     }
 }

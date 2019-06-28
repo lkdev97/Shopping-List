@@ -39,6 +39,14 @@ header {
     cursor: pointer;
 }
 
+.remove {
+    color: red;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    cursor: pointer;
+}
+
 .save {
     position: absolute;
     bottom: 10px;
@@ -47,4 +55,9 @@ header {
 
 #list-name {
     display: block;
+}
+
+.article-box {
+    background: var(--article-box-background);
+    position: relative;
 }

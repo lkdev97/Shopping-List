@@ -6,7 +6,6 @@ public class ListManager {
 
     private static HashMap<Integer, ArrayList<String>> ShoppingList = new HashMap<>();
 	
-
     public static void addList(int id) {
         ArrayList<String> article = new ArrayList<>();
         ShoppingList.put(id, article);
@@ -35,5 +34,13 @@ public class ListManager {
 
     public static void addArticle(int id, String name) {
         if(!containsName(id, name)) ShoppingList.get(id).add(name);
+    }
+
+    public static void removeArticle(int id, String name) {
+        ShoppingList.get(id).remove(name);
+    }
+
+    public static ArrayList<String> getArticlesById(int id) {
+       return ShoppingList.get(id);
     }
 }
