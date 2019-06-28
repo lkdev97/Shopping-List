@@ -59,7 +59,7 @@ public class HTMLGenerator {
         for(int i = 0; i < articles.size(); i++) {
             listHTML.append(generateArticleHTML(articles.get(i)));
         }
-        
+        //listHTML.append(generateArticleListHTML(id, articles)); <- die funktion muss noch ausgearbetiet werden
         return listHTML.toString();
     }
 
@@ -75,12 +75,21 @@ public class HTMLGenerator {
 
     private static String generateArticleHTML(String name) {
         return "\t<div class=\"article-box\">"
-                + "<p class=\"article\">"+  name +"</p>"
+                + "<p class=\"article\">"+ name +"</p>"
                 + "<span id=\"remove\" class=\"remove\">X</span>"
                 + "</div>\n";
     }
 
     private static String generateOpenHTML(int id, String name) {
         return "\t<button id=\""+ id +"\" type=\"button\" class=\"btn btn-secondary open\">" + name +"</button>";
+    }
+
+    //@TODO ! add rekursiv function
+    private static String generateArticleListHTML(int id, ArrayList<String> articles) {
+        String article = "";
+        for(int i = 0; i <= articles.size(); i++) {
+           article += articles.get(i);
+        }
+        return article;
     }
 }
