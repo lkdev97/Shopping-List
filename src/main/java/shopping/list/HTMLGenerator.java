@@ -51,16 +51,8 @@ public class HTMLGenerator {
         return openHTML.toString();
     }
 
-    public static String getListHTMLbyId(int id) {
-        StringBuilder listHTML = new StringBuilder();
-
-        ArrayList<String> articles = ListManager.getArticlesById(id);
-        listHTML.append(generateListHTML(id));
-        for(int i = 0; i < articles.size(); i++) {
-            listHTML.append(generateArticleHTML(articles.get(i)));
-        }
-        //listHTML.append(generateArticleListHTML(id, articles)); <- die funktion muss noch ausgearbetiet werden
-        return listHTML.toString();
+    public static String getListHTMLbyId(int id, String name) {
+        return generateArticleListHTML(id, ListManager.getArticlesById(id), name);
     }
 
     private static String generateListHTML(int id) {
@@ -84,12 +76,20 @@ public class HTMLGenerator {
         return "\t<button id=\""+ id +"\" type=\"button\" class=\"btn btn-secondary open\">" + name +"</button>";
     }
 
-    //@TODO ! add rekursiv function
-    private static String generateArticleListHTML(int id, ArrayList<String> articles) {
-        String article = "";
-        for(int i = 0; i <= articles.size(); i++) {
-           article += articles.get(i);
+    private static String generateArticleListHTML(int id, ArrayList<String> articles, String name) {
+        StringBuilder article = new StringBuilder();
+
+        for(int i = 0; i < articles.size(); i++) {
+           article.append(getArticleHTML(articles.get(i)));
         }
-        return article;
+
+        return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"
+                + "<span id=\"close\" class=\"close\">X</span>"
+                + "<input id=\"list-name\" value=\" "+ name +"\">"
+                + "<input id=\"article\" placeholder=\"Name des Artikels\">"
+                + "<button id=\"add-article\" type=\"button\" class=\"btn btn-secondary add-article\">+</button>"
+                + "<button id=\"save\" type=\"button\" class=\"btn btn-success save\">Speichern</button>"
+                + article.toString()
+                + "</div>\n";
     }
 }

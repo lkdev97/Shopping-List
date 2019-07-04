@@ -34,16 +34,18 @@ public class App {
         });
 
         app.post("/save", ctx -> {
-            ctx.result(HTMLGenerator.getListOpenHTML(ListManager.splitId(ctx.formParam("id")), ctx.formParam("name")));
+            int id = ListManager.splitId(ctx.formParam("id"));
+            ctx.result(HTMLGenerator.getListOpenHTML(id, ctx.formParam("name")));
         });
-
+ 
         app.post("/remove", ctx -> {
             HTMLGenerator.undo();
             ListManager.removeArticle(ListManager.splitId(ctx.formParam("id")), ctx.formParam("name"));
         });
 
         app.post("/open", ctx -> {
-            ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id"))));
+            //ctx.result(ListManager.getHTML(Integer.parseInt(ctx.formParam("id"))));
+            ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id")), ctx.formParam("name")));
         });
     }
 }

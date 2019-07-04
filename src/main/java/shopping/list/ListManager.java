@@ -5,6 +5,7 @@ import java.util.*;
 public class ListManager {
 
     private static HashMap<Integer, ArrayList<String>> ShoppingList = new HashMap<>();
+    //private static Map<Integer, String> ShoppingHTML = new HashMap<>();
 	
     public static void addList(int id) {
         ArrayList<String> article = new ArrayList<>();
@@ -43,4 +44,12 @@ public class ListManager {
     public static ArrayList<String> getArticlesById(int id) {
        return ShoppingList.get(id);
     }
+
+   /* public static void saveHTMLbyId(int id, String html) {
+        ShoppingHTML.put(id, html);
+    }
+
+    public static String getHTML(int id) {
+        return ShoppingHTML.get(id);
+    }*/
 }

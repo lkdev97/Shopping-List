@@ -95,7 +95,7 @@ function removeArticle() {
 
 function openList() {
     me = this;
-    sendToServer('/open', "id=" + this.id).then((response) => {
+    sendToServer('/open', "id=" + this.id + "&name=" + this.innerHTML).then((response) => {
         response.text().then(function(responseText) {
             document.getElementById("emotion").insertAdjacentHTML('beforeend', responseText);
             me.remove();
