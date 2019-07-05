@@ -28,6 +28,7 @@ public class HTMLGenerator {
     }
 
     public static void undo() {
+        System.out.println(" Counter lautet " + Counter);
         Counter--;
     }
 
@@ -73,7 +74,7 @@ public class HTMLGenerator {
     }
 
     private static String generateOpenHTML(int id, String name) {
-        return "\t<button id=\"" + id + "\" type=\"button\" class=\"btn btn-secondary open\">" + name +"</button>";
+       return "\t<button id=\"" + id + "\" type=\"button\" class=\"btn btn-secondary open\">" + name +"</button>";
     }
 
     private static String generateArticleListHTML(int id, ArrayList<String> articles, String name) {
@@ -85,7 +86,7 @@ public class HTMLGenerator {
 
         return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"
                 + "<span id=\"close\" class=\"close\">X</span>"
-                + "<input id=\"list-name\" value=\" "+ name +"\">"
+                + "<input id=\"list-name\" value=\" "+ name +"\" placeholder=\"Name des Einkaufszettels\">"
                 + "<input id=\"article\" placeholder=\"Name des Artikels\">"
                 + "<button id=\"add-article\" type=\"button\" class=\"btn btn-secondary add-article\">+</button>"
                 + "<button id=\"save\" type=\"button\" class=\"btn btn-success save\">Speichern</button>"

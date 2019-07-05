@@ -61,3 +61,7 @@ header {
     background: var(--article-box-background);
     position: relative;
 }
+
+.add-list-box {
+    display: block;
+}
