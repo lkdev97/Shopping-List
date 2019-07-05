@@ -73,7 +73,7 @@ public class HTMLGenerator {
     }
 
     private static String generateOpenHTML(int id, String name) {
-        return "\t<button id=\""+ id +"\" type=\"button\" class=\"btn btn-secondary open\">" + name +"</button>";
+        return "\t<button id=\"" + id + "\" type=\"button\" class=\"btn btn-secondary open\">" + name +"</button>";
     }
 
     private static String generateArticleListHTML(int id, ArrayList<String> articles, String name) {
