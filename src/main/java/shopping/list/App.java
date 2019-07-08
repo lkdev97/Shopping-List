@@ -47,5 +47,12 @@ public class App {
             //ctx.result(ListManager.getHTML(Integer.parseInt(ctx.formParam("id"))));
             ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id")), ctx.formParam("name")));
         });
+
+       /* app.ws("/memory", ws ->{
+            ws.onConnect(session -> View.showStartMenu(session, 2, Design.Dozent));
+            ws.onMessage(App::handleMessage);
+            ws.onClose((session, statusCode, reason) -> games.remove(session));
+            ws.onError((session, throwable) -> throwable.printStackTrace());
+        }); */
     }
 }
