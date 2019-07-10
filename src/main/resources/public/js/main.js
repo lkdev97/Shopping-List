@@ -9,6 +9,8 @@ let removeBtn;
 document.addEventListener('DOMContentLoaded', () => {
     initUI();
     registerEvents();
+
+    window.onload = setupWebSocket;
 });
 
 function initUI() {

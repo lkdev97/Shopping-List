@@ -32,7 +32,8 @@ public class HTMLGenerator {
         Counter--;
     }
 
-    public static String getArticleHTML(String name) {
+    public static String getArticleHTML(String name, int id) {
+        if(name.trim().isEmpty() || ListManager.containsName(id, name)) return "";
         StringBuilder articleHTML = new StringBuilder();
 
         articleHTML.append(generateArticleHTML(name));
@@ -81,7 +82,7 @@ public class HTMLGenerator {
         StringBuilder article = new StringBuilder();
 
         for(int i = 0; i < articles.size(); i++) {
-           article.append(getArticleHTML(articles.get(i)));
+           article.append(getArticleHTML(articles.get(i), id));
         }
 
         return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"

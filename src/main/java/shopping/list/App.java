@@ -6,7 +6,6 @@ package shopping.list;
 import io.javalin.Javalin;
 
 
-
 public class App {
 
     public static void main(String[] args) {
@@ -29,7 +28,8 @@ public class App {
         app.post("/article", ctx -> {
             int id = ListManager.splitId(ctx.formParam("id"));
             String name = ctx.formParam("name");
-            if(!ListManager.containsName(id, name)) ctx.result(HTMLGenerator.getArticleHTML(name));
+            //            if(!ListManager.containsName(id, name)) -- als test
+            ctx.result(HTMLGenerator.getArticleHTML(name, id));
             ListManager.addArticle(id, name);
         });
 
@@ -48,11 +48,18 @@ public class App {
             ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id")), ctx.formParam("name")));
         });
 
+
+        app.ws("/test", ws-> {
+            ws.onConnect(ctx -> {
+                System.out.println("Connect");
+            });
+        });
        /* app.ws("/memory", ws ->{
             ws.onConnect(session -> View.showStartMenu(session, 2, Design.Dozent));
             ws.onMessage(App::handleMessage);
             ws.onClose((session, statusCode, reason) -> games.remove(session));
             ws.onError((session, throwable) -> throwable.printStackTrace());
         }); */
+
     }
 }

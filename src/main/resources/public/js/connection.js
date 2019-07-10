@@ -9,8 +9,9 @@ function sendToServer(target, query = '') {
     return fetch(target, {body: query, method : "POST"}).then(response => response).catch(console.error);
 }
 
-http.onreadystatechange = function() {
-    if(this.readyState == 4 && this.status == 200) {
-        console.log(this);
-    }
+function setupWebSocket() {
+    console.log("Websocket");
+    let ws = new WebSocket ("ws://" + location.hostname + ":" + location.port + "/test");
+    ws.onconnect = () => alert("Connection.....");
+    ws.onclose = () => alert("Websocket closed...."); 
 }
