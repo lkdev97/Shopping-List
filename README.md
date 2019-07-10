@@ -1,4 +1,9 @@
-# Projekt: Einkaufszettel! (Fr/2, Kr) <!-- omit in toc -->
+# Projekt: Einkaufszettel (Fr/1, Hb)
+
+Name & Praktikumstermin: Lars Köhler, 5211085 Kr)
+
+
+## Inhaltsverzeichnis
 
 > Bestimmt kennen Sie alle [Vier Gewinnt](https://de.wikipedia.org/wiki/Vier_gewinnt). Hierbei handelt es sich um ein Spiel für zwei Personen, bei dem die Spieler im Wechsel 
 rote und gelbe Steine in ein (in unserem Fall) 8x8-Spielfeld legen. Wer es zuerst schafft, vier Steine seiner Farbe in eine Reihe (horizontal, vertikal oder diagonal) zu bringen,
