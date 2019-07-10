@@ -1,6 +1,6 @@
-# Projekt: Einkaufszettel (Fr/1, Hb)
+# Projekt: Einkaufszettel (Fr/2, Kr)
 
-Name & Praktikumstermin: Lars Köhler, 5211085 Kr)
+Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
 
 
 ## Inhaltsverzeichnis
