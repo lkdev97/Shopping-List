@@ -99,9 +99,7 @@ Der Ordner `resources` beinhaltet den Code für das GUI (`.html` und `.css`) und
 
 Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den Einsatz dieses Features in den angegebenen Zeilen im Quellcode.
 
-1. Bootstrap, [fahrtenbuch.html](src/main/resources/private/fahrtenbuch.html) (65-161)
-2. Streams, [UserManagement.java](src/main/java/pack/UserManagement.java) (18, 36)
-
+1. Bootstrap. **[index.html](src/main/resources/public/index.html)** (13-41)
 
 <Ihre Dokumentation zu den Features>
 
