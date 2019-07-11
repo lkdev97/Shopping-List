@@ -49,26 +49,15 @@ Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann
 
 Verlinkter Dateiname | Dateiart | LOC
 ---------------------|----------|-----
-**[Adress.java](src/main/java/pack/Adress.java)** | Java | 14
 **[App.java](src/main/java/pack/App.java)** | Java | 110
-**[Coder.java](src/main/java/pack/Coder.java)** | Java | 22
-**[CreateFiles.java](src/main/java/pack/CreateFiles.java)** | Java | 25
-**[Journey.java](src/main/java/pack/Journey.java)** | Java | 83
-**[JourneyTemplate.java](src/main/java/pack/JourneyTemplate.java)** | Java | 39
-**[MarkdownConverter.java](src/main/java/pack/MarkdownConverter.java)** | Java | 63
-**[Sessions.java](src/main/java/pack/Sessions.java)** | Java | 21
-**[StoreableHandler.java](src/main/java/pack/StoreableHandler.java)** | Java | 30
-**[Storeable.java](src/main/java/pack/Storeable.java)** | Java | 2
-**[User.java](src/main/java/pack/User.java)** | Java | 22
-**[UserManagement.java](src/main/java/pack/UserManagement.java)** | Java | 32
-**[indexscript.js](src/main/resources/public/indexscript.js)** | JavaScript | 18
-**[fahrtenbuchscript.js](src/main/resources/private/fahrtenbuchscript.js)** | JavaScript | 56
+**[ListManager.java](src/main/java/pack/User.java)** | Java | 22
+**[HTMLGenerator.java](src/main/java/pack/UserManagement.java)** | Java | 32
+**[connection.js](src/main/resources/public/indexscript.js)** | JavaScript | 18
+**[main.js](src/main/resources/private/fahrtenbuchscript.js)** | JavaScript | 56
 **[index.html](src/main/resources/public/index.html)** | HTML | 34
-**[fahrtenbuch.html](src/main/resources/private/fahrtenbuch.html)** | HTML | 148
-**[indexstyles.css](src/main/resources/public/indexstyles.css)** | CSS | 44
-**[fahrtenbuchstyles.css](src/main/resources/private/fahrtenbuchstyles.css)** | CSS | 30
-**[hintergrundIndex.jpg](src/main/resources/public/hintergrundIndex.jpg)** | JPG | -
-**[hintergrundFahrten.jpg](src/main/resources/private/hintergrundFahrten.jpg)** | JPG | -
+**[all.css](src/main/resources/public/indexstyles.css)** | CSS | 44
+**[main.css](src/main/resources/private/fahrtenbuchstyles.css)** | CSS | 30
+**[variables.css](src/main/resources/public/hintergrundIndex.jpg)** | JPG | -
  <br> | <br> | *= 793* 
 
 
@@ -76,9 +65,9 @@ Verlinkter Dateiname | Dateiart | LOC
 
 Verlinkter Dateiname | Testart | Anzahl der Tests
 ---------------------|---------|-----------------
-**[FahrtenbuchTest.java](src/test/java/FahrtenbuchTest.java)** | JUnit4 | 53
+**[ListTest.java](src/test/java/FahrtenbuchTest.java)** | Asserts | 53
 
-Die Tests werden wie folgt ausgeführt: Im Terminal wird auf der Ebene der `build.gradle` die Eingabe `gradle test` getätigt.
+Die Tests werden wie folgt ausgeführt: Im Terminal wird auf der Ebene der `ListTest.java` (src/main/java/shopping/list) die Eingabe `jshell -R-ea ListTest.java` getätigt.
 
 
 
