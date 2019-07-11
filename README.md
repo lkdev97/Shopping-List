@@ -34,9 +34,6 @@ Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann
 <br> 
 
 **Hinweise**: 
-* Ihr Zugang zum Testen der Anwendung: **Benutzername**: *testuser*, **Passwort**: *testuser*. <br> Die Registrier-Funktion kann selbstverständlich trotzdem genutzt werden, um einen neuen Benutzer zu erstellen. 
-* Der JavaScript-Code teilt sich, wie mit Professor Herzberg vereinbart, auf **zwei** Dateien auf: `fahrtenscript.js` im `private`Ordner und `indexscript.js` im `public` Ordner, somit wird sauber zwischen der Login-Ansicht und der Fahrtenbuch-Ansicht getrennt. 
-* Bei den Tests wurden mehrere Tests in Methoden gekapselt, um die Tests logisch zu unterteilen.
 
 
 ---
@@ -57,7 +54,7 @@ Verlinkter Dateiname | Dateiart | LOC
 **[index.html](src/main/resources/public/index.html)** | HTML | 34
 **[all.css](src/main/resources/public/indexstyles.css)** | CSS | 44
 **[main.css](src/main/resources/private/fahrtenbuchstyles.css)** | CSS | 30
-**[variables.css](src/main/resources/public/hintergrundIndex.jpg)** | JPG | -
+**[variables.css](src/main/resources/public/hintergrundIndex.jpg)** | CSS | 20
  <br> | <br> | *= 793* 
 
 
