@@ -46,7 +46,7 @@ Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann
 
 Verlinkter Dateiname | Dateiart | LOC
 ---------------------|----------|-----
-**[App.java](src/main/java/pack/App.java)** | Java | 33
+**[App.java](/src/main/java/shopping/list/App.java)** | Java | 33
 **[ListManager.java](src/main/java/pack/User.java)** | Java | 40
 **[HTMLGenerator.java](src/main/java/pack/UserManagement.java)** | Java | 74
 **[connection.js](src/main/resources/public/indexscript.js)** | JavaScript | 3
