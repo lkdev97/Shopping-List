@@ -46,15 +46,15 @@ Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann
 
 Verlinkter Dateiname | Dateiart | LOC
 ---------------------|----------|-----
-**[App.java](src/main/java/pack/App.java)** | Java | 110
-**[ListManager.java](src/main/java/pack/User.java)** | Java | 22
-**[HTMLGenerator.java](src/main/java/pack/UserManagement.java)** | Java | 32
-**[connection.js](src/main/resources/public/indexscript.js)** | JavaScript | 18
-**[main.js](src/main/resources/private/fahrtenbuchscript.js)** | JavaScript | 56
-**[index.html](src/main/resources/public/index.html)** | HTML | 34
-**[all.css](src/main/resources/public/indexstyles.css)** | CSS | 44
-**[main.css](src/main/resources/private/fahrtenbuchstyles.css)** | CSS | 30
-**[variables.css](src/main/resources/public/hintergrundIndex.jpg)** | CSS | 20
+**[App.java](src/main/java/pack/App.java)** | Java | 33
+**[ListManager.java](src/main/java/pack/User.java)** | Java | 40
+**[HTMLGenerator.java](src/main/java/pack/UserManagement.java)** | Java | 74
+**[connection.js](src/main/resources/public/indexscript.js)** | JavaScript | 3
+**[main.js](src/main/resources/private/fahrtenbuchscript.js)** | JavaScript | 80
+**[index.html](src/main/resources/public/index.html)** | HTML | 45
+**[all.css](src/main/resources/public/indexstyles.css)** | CSS | 2
+**[main.css](src/main/resources/private/fahrtenbuchstyles.css)** | CSS | 56
+**[variables.css](src/main/resources/public/hintergrundIndex.jpg)** | CSS | 9
  <br> | <br> | *= 793* 
 
 
