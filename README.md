@@ -108,7 +108,7 @@ Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den
 
 
 ## Quellennachweis
-# Allgemeine Quellen
+### Allgemeine Quellen
 
 <br> https://www.w3schools.com/ <br>
 https://stackoverflow.com/ <br>
