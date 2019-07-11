@@ -22,12 +22,11 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
 
 ## Kurzbeschreibung inkl. Screenshot
 
-> Namentlich angelehnt an das alt- und auch neugriechische Wort ὁδός (dt. "Reise", beziehungsweise  "Straße" oder "Weg") soll die Fahrtenbuch App **Odos** eine Plattform bieten, welche es ermöglicht einfach, 
-digital und überall ein Fahrtenbuch zu führen. <br> Die Applikation ist auf mehrere Benutzer ausgelegt, daher verfügt sie über ein Registrier- und Einloggsystem. Beim Registriervorgang werden die Zugangsdaten und
-der aktuelle Kilometerstand gesetzt. Intern wird das Passwort durch Base64-Kodierung verschlüsselt und mit dem zugehörigen Benutzername gespeichert.  <br> Anschließend kann der Benutzer sein digitales Fahrtenbuch führen, der Fortschritt wird gespeichert und es kann beim nächsten Login dort weitergearbeitet werden, wo der Benutzer aufgehört hat. 
-<br> Neben den essenziellen Eckdaten einer Fahrt können diese zusätzlich auch mit Notizen versehen werden. Wichtige, beziehungsweise oft auftretende, Fahrten können als Vorlage gespeichert werden, um das Arbeiten zu erleichtern. 
-<br> Möchte der Benutzer seine Fahrtentabelle, entweder zum Einreichen oder für sich selber,
-speichern oder drucken, kann er dies mithilfe des integrierten Markdown Dokument-Erstellers machen.
+> Jeder kennt es, dass man einkaufen gehen will und man meint, dass man sich alles was man besorgen will merken kann und dann im Nachhinein doch merkt, etwas vergessen zu haben.
+Dafür gibt es Einkaufszettel und diese App ist dafür gedacht, dass man sich digital Einkaufszettel erstellen kann mit allen Artikeln, die man besorgen möchte.
+Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann schnell sehen kann, was man noch einkaufen möchte ohne etliche Papierzettel zu verwenden.
+
+
 
 
 ![Screenshot](InActionCollage.jpg)
