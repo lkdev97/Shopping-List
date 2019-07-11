@@ -81,19 +81,36 @@ Der `main` Ordner enthält den eigentlichen Programmcode der Anwendung im Ordner
 
 | Datei | Inhalt |
 | ----- | ----- |
-**[App.java](/src/main/java/shopping/list/App.java)** LoremIpsum
-**[ListManager.java](/src/main/java/shopping/list/ListManager.java)** LoremIpsum
-**[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** LoremIpsum
-**[connection.js](src/main/resources/public/js/connection.js)** LoremIpsum
-**[main.js](src/main/resources/public/js/main.js)** LoremIpsum
-**[index.html](src/main/resources/public/index.html)** LoremIpsum
-**[all.css](src/main/resources/public/css/all.css)** LoremIpsum
-**[main.css](src/main/resources/public/css/main.css)** LoremIpsum
-**[variables.css](src/main/resources/public/css/variables.css)** LoremIpsum
+**[App.java](/src/main/java/shopping/list/App.java)** | LoremIpsum
+**[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | LoremIpsum
+**[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | LoremIpsum
+**[connection.js](src/main/resources/public/js/connection.js)** | LoremIpsum
+**[main.js](src/main/resources/public/js/main.js)** | LoremIpsum
+**[index.html](src/main/resources/public/index.html)** | LoremIpsum
+**[all.css](src/main/resources/public/css/all.css)** | LoremIpsum
+**[main.css](src/main/resources/public/css/main.css)** | LoremIpsum
+**[variables.css](src/main/resources/public/css/variables.css)** | LoremIpsum
 
 <br> 
 
 Der Ordner `resources` beinhaltet den Code für das GUI (`.html` und `.css`) und die beiden JavaScript Dateien zum Senden von HTTP-Requests und Verarbeiten der HTTP-Responses des Servers. <br>
+
+## Technischer Anspruch (TA) und Umsetzung der Features
+
+Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den Einsatz dieses Features in den angegebenen Zeilen im Quellcode.
+
+1. Speicherung/Abruf von Daten im lokalen Dateisystem, [App.java](/src/main/java/tictactoe/App.java) (104-112)
+2. WebSockets, [App.java](/src/main/java/tictactoe/App.java) (204-240)
+3. Validation, [App.java](/src/main/java/tictactoe/App.java) (300-303)
+4. Streams, [App.java](/src/main/java/tictactoe/App.java) (130-135)
+
+<Ihre Dokumentation zu den Features>
+
+
+## Quellennachweis
+
+* <Quelle A>
+* <Quelle B>
 
 
 
