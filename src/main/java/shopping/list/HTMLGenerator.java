@@ -8,18 +8,18 @@ public class HTMLGenerator {
 
     static Integer last;
 
-    public static String getListHTML() {
+    public static String getListHTML(String name) {
         StringBuilder listString = new StringBuilder();
 
         if(last != null) {
-            listString.append(generateListHTML(last));
+            listString.append(generateListHTML(last, name));
             last = null;
             ListManager.addList(Counter);
             Counter++;
             return listString.toString();
         }
         if(Counter < 5) {
-            listString.append(generateListHTML(Counter));
+            listString.append(generateListHTML(Counter, name));
             ListManager.addList(Counter);
             Counter++;
         };
@@ -33,7 +33,7 @@ public class HTMLGenerator {
     }
 
     public static String getArticleHTML(String name, int id) {
-        if(name.trim().isEmpty() || ListManager.containsName(id, name)) return "";
+        //if(name.trim().isEmpty() || ListManager.containsName(id, name)) return "";
         StringBuilder articleHTML = new StringBuilder();
 
         articleHTML.append(generateArticleHTML(name));
@@ -57,10 +57,10 @@ public class HTMLGenerator {
         return generateArticleListHTML(id, ListManager.getArticlesById(id), name);
     }
 
-    private static String generateListHTML(int id) {
+    private static String generateListHTML(int id, String name) {
         return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"
                 + "<span id=\"close\" class=\"close\">X</span>"
-                + "<input id=\"list-name\" placeholder=\"Name des Einkaufszettels\">"
+                + "<input id=\"list-name\" placeholder=\"Name des Einkaufszettels\" value=\"" + name +"\">"
                 + "<input id=\"article\" placeholder=\"Name des Artikels\">"
                 + "<button id=\"add-article\" type=\"button\" class=\"btn btn-secondary add-article\">+</button>"
                 + "<button id=\"save\" type=\"button\" class=\"btn btn-success save\">Speichern</button>"
@@ -85,6 +85,8 @@ public class HTMLGenerator {
            article.append(getArticleHTML(articles.get(i), id));
         }
 
+        System.out.println("OPEN");
+        System.out.println(article.toString());
         return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"
                 + "<span id=\"close\" class=\"close\">X</span>"
                 + "<input id=\"list-name\" value=\" "+ name +"\" placeholder=\"Name des Einkaufszettels\">"

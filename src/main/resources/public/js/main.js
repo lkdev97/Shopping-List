@@ -43,8 +43,8 @@ function registerHelper(el, event, fnc) {
 }
 
 function addList() {
-    //shoppingList.classList.remove('is--hidden');
-    sendToServer('/listhtml').then((response) => {
+    listName = prompt("Geben Sie den Namen ihrer Liste an!");
+    sendToServer('/listhtml', "name=" + listName).then((response) => {
         response.text().then(function(responseText) {
             document.getElementById("emotion").insertAdjacentHTML('beforeend', responseText);
             registerEvents();
@@ -53,7 +53,7 @@ function addList() {
 }
 
 function closeList() {
-    sendRequestGET('/close', "id=" + this.parentElement.id);
+    sendToServer('/close', "id=" + this.parentElement.id);
     document.getElementById(this.parentElement.id).remove();
 }
  

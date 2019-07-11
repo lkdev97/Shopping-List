@@ -45,7 +45,13 @@ public class ListManager {
        return ShoppingList.get(id);
     }
 
+    public static int getListSize(int id) {
+        return ShoppingList.size();
+    }
 
+    public static int getNextId() {
+        return 1;
+    }
    /* public static void saveHTMLbyId(int id, String html) {
         ShoppingHTML.put(id, html);
     }

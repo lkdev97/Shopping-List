@@ -14,10 +14,11 @@ public class App {
             .start(80);
         
         app.post("/listhtml", ctx -> {
-            ctx.result(HTMLGenerator.getListHTML());
+            
+            ctx.result(HTMLGenerator.getListHTML(ctx.formParam("name")));
         });
 
-        app.get("/close", ctx -> {
+        app.post("/close", ctx -> {
             int id = ListManager.splitId(ctx.queryParam("id"));
             HTMLGenerator.setLastList(id);
             HTMLGenerator.undo();
@@ -29,7 +30,7 @@ public class App {
             int id = ListManager.splitId(ctx.formParam("id"));
             String name = ctx.formParam("name");
             //            if(!ListManager.containsName(id, name)) -- als test
-            ctx.result(HTMLGenerator.getArticleHTML(name, id));
+            if(!ListManager.containsName(id, name)) ctx.result(HTMLGenerator.getArticleHTML(name, id));
             ListManager.addArticle(id, name);
         });
 
