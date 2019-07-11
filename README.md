@@ -112,6 +112,16 @@ Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den
 * <Quelle A>
 * <Quelle B>
 
+**HTML, CSS, JavaScript**: <br> https://www.w3schools.com/ <br>
+https://stackoverflow.com/ <br>
+
+**Javalin**: <br> https://git.thm.de/dhzb87/JbX <br>
+https://javalin.io/documentation <br>
+https://javalin.io/tutorials/ <br>
+
+
+**Bootstrap**: <br> https://getbootstrap.com/docs/4.3/getting-started/introduction/ <br>
+
 
 
 
