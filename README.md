@@ -99,10 +99,9 @@ Der Ordner `resources` beinhaltet den Code für das GUI (`.html` und `.css`) und
 
 Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den Einsatz dieses Features in den angegebenen Zeilen im Quellcode.
 
-1. Speicherung/Abruf von Daten im lokalen Dateisystem, [App.java](/src/main/java/tictactoe/App.java) (104-112)
-2. WebSockets, [App.java](/src/main/java/tictactoe/App.java) (204-240)
-3. Validation, [App.java](/src/main/java/tictactoe/App.java) (300-303)
-4. Streams, [App.java](/src/main/java/tictactoe/App.java) (130-135)
+1. Bootstrap, [fahrtenbuch.html](src/main/resources/private/fahrtenbuch.html) (65-161)
+2. Streams, [UserManagement.java](src/main/java/pack/UserManagement.java) (18, 36)
+
 
 <Ihre Dokumentation zu den Features>
 
