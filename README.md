@@ -49,6 +49,7 @@ Verlinkter Dateiname | Dateiart | LOC
 **[App.java](/src/main/java/shopping/list/App.java)** | Java | 33
 **[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | Java | 40
 **[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | Java | 74
+**[Session.java](/src/main/java/shopping/list/Session.java)** | Java | 69
 **[connection.js](src/main/resources/public/js/connection.js)** | JavaScript | 3
 **[main.js](src/main/resources/public/js/main.js)** | JavaScript | 80
 **[index.html](src/main/resources/public/index.html)** | HTML | 45
@@ -84,6 +85,7 @@ Der `main` Ordner enthält den eigentlichen Programmcode der Anwendung im Ordner
 **[App.java](/src/main/java/shopping/list/App.java)** | LoremIpsum
 **[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | LoremIpsum
 **[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | LoremIpsum
+**[Session.java](/src/main/java/shopping/list/Session.java)** | LoremIpsum
 **[connection.js](src/main/resources/public/js/connection.js)** | LoremIpsum
 **[main.js](src/main/resources/public/js/main.js)** | LoremIpsum
 **[index.html](src/main/resources/public/index.html)** | LoremIpsum
@@ -100,6 +102,7 @@ Der Ordner `resources` beinhaltet den Code für das GUI (`.html` und `.css`) und
 Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den Einsatz dieses Features in den angegebenen Zeilen im Quellcode.
 
 1. Bootstrap. **[index.html](src/main/resources/public/index.html)** (13-41)
+2. Session Handling **[Session.html](src/main/java/public/Session.java)**
 
 <Ihre Dokumentation zu den Features>
 
