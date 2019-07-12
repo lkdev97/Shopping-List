@@ -23,8 +23,4 @@ assert !ListManager.containsName(id, article) : "List shouldnt contain Apfel";
 
 //This should not effect the List!
 ListManager.addList(id);
-assert ListManager.getSize(id) == 1 : "List isn't size 1";
 //ListManager.removeList(id);
-
-assert false : "Lalala";
-assert false : "False + " + ListManager.getSize(id) + "LIST: + " + ListManager.getSize(id);
