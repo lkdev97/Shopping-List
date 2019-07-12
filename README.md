@@ -67,24 +67,24 @@ Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann
 
 Verlinkter Dateiname | Dateiart | LOC
 ---------------------|----------|-----
-**[App.java](/src/main/java/shopping/list/App.java)** | Java | 33
-**[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | Java | 40
-**[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | Java | 74
-**[Session.java](/src/main/java/shopping/list/Session.java)** | Java | 69
+**[App.java](/src/main/java/shopping/list/App.java)** | Java | 43
+**[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | Java | 65
+**[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | Java | 59
+**[Session.java](/src/main/java/shopping/list/Session.java)** | Java | 21
 **[connection.js](src/main/resources/public/js/connection.js)** | JavaScript | 3
-**[main.js](src/main/resources/public/js/main.js)** | JavaScript | 80
-**[index.html](src/main/resources/public/index.html)** | HTML | 45
+**[main.js](src/main/resources/public/js/main.js)** | JavaScript | 82
+**[index.html](src/main/resources/public/index.html)** | HTML | 37
 **[all.css](src/main/resources/public/css/all.css)** | CSS | 2
-**[main.css](src/main/resources/public/css/main.css)** | CSS | 56
+**[main.css](src/main/resources/public/css/main.css)** | CSS | 58
 **[variables.css](src/main/resources/public/css/variables.css)** | CSS | 9
- <br> | <br> | *= 793* 
+ <br> | <br> | *= 379* 
 
 
 ### Testdateien (TST)
 
 Verlinkter Dateiname | Testart | Anzahl der Tests
 ---------------------|---------|-----------------
-**[ListTest.java](/src/main/java/shopping/list/ListTest.java)** | Asserts | 53
+**[ListTest.java](/src/main/java/shopping/list/ListTest.java)** | Asserts | 
 
 Die Tests werden wie folgt ausgeführt: Im Terminal wird auf der Ebene der `ListTest.java` (src/main/java/shopping/list) die Eingabe `jshell -R-ea ListTest.java` getätigt.
 
