@@ -14,15 +14,29 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
     - [Aufbau der Anwendung](#Aufbau-der-Anwendung)
     - [Dokumentation des implementierten WebAPIs](#Dokumentation-des-implementierten-WebAPIs)
         - [1. Allgemein](#1-Allgemein)
+            - [Request](#Request)
+            - [Response](#Response)
         - [2. Laden des Einkaufszettels (listhtml)](#2-laden-des-einkaufszettels)
+            - [Request](#Request-2)
+            - [Response](#Response-2)
         - [3. Artikel zu dem Einkaufszettel hinzufügen](#3-Artikel-zu-dem-Einkaufszettel-hinzufügen)
+            - [Request](#Request-3)
+            - [Response](#Response-3)
         - [4. Artikel von einem Einkaufszettel entfernen](#4-Artikel-von-einem-Einkaufszettel-entfernen)
+            - [Request](#Request-4)
+            - [Response](#Response-4)
         - [5. Einkaufszettel schließen ohne zu speichern](#5-Einkaufszettel-schließen-ohne-zu-speichern)
+            - [Request](#Request-5)
+            - [Response](#Response-5)
         - [6. Einkaufszettel schließen mit speichern](#6-Einkaufszettel-schließen-mit-speichern)
+            - [Request](#Request-6)
+            - [Response](#Response-6)
         - [7. Einen gespeicherten Einkaufszettel öffnen](#7-Einen-gespeicherten-Einkaufszettel-öffnen)
+            - [Request](#Request-7)
+            - [Response](#Response-7)
         - [Technischer Anspruch (TA) und Umsetzung der Features](#Technischer-Anspruch-TA-und-Umsetzung-der-Features)
   - [Quellennachweis](#Quellennachweis)
-    - [1. Allgemeine Quellen](#1-Allgemeine-Quellen)
+    - [1. Quellen](#1-Quellen)
   - [Skizzen-Entwürfe der grafischen Oberfläche - Erste Design-Ansätze](#Skizzen-Entw%C3%BCrfe-der-grafischen-Oberfl%C3%A4che---Erste-Design-Ans%C3%A4tze)
 
 
@@ -269,7 +283,7 @@ Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den
 
 
 ## Quellennachweis
-### Allgemeine Quellen
+### Quellen
 
 <br> https://www.w3schools.com/ <br>
 https://stackoverflow.com/ <br>
