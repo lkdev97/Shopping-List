@@ -102,7 +102,7 @@ Der Ordner `resources` beinhaltet den Code für das GUI (`.html` und `.css`) und
 Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den Einsatz dieses Features in den angegebenen Zeilen im Quellcode.
 
 1. Bootstrap. **[index.html](src/main/resources/public/index.html)** (13-41)
-2. Session Handling **[Session.html](src/main/java/public/Session.java)**
+2. Session Handling **[Session.java](src/main/java/public/Session.java)**
 
 <Ihre Dokumentation zu den Features>
 
