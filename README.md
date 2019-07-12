@@ -93,16 +93,16 @@ Die Tests werden wie folgt ausgeführt: Im Terminal wird auf der Ebene der `List
 
 | Datei | Inhalt |
 | ----- | ----- |
-**[App.java](/src/main/java/shopping/list/App.java)** | LoremIpsum
-**[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | LoremIpsum
-**[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | LoremIpsum
-**[Session.java](/src/main/java/shopping/list/Session.java)** | LoremIpsum
-**[connection.js](src/main/resources/public/js/connection.js)** | LoremIpsum
-**[main.js](src/main/resources/public/js/main.js)** | LoremIpsum
-**[index.html](src/main/resources/public/index.html)** | LoremIpsum
-**[all.css](src/main/resources/public/css/all.css)** | LoremIpsum
-**[main.css](src/main/resources/public/css/main.css)** | LoremIpsum
-**[variables.css](src/main/resources/public/css/variables.css)** | LoremIpsum
+**[App.java](/src/main/java/shopping/list/App.java)** | 
+**[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | 
+**[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | 
+**[Session.java](/src/main/java/shopping/list/Session.java)** | 
+**[connection.js](src/main/resources/public/js/connection.js)** | 
+**[main.js](src/main/resources/public/js/main.js)** | 
+**[index.html](src/main/resources/public/index.html)** | 
+**[all.css](src/main/resources/public/css/all.css)** | 
+**[main.css](src/main/resources/public/css/main.css)** | 
+**[variables.css](src/main/resources/public/css/variables.css)** | 
 
 <br> 
 
