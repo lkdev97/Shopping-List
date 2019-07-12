@@ -113,7 +113,9 @@ https://stackoverflow.com/ <br>
 https://javalin.io/documentation <br>
 https://javalin.io/tutorials/ <br>
 <br>https://moodle.thm.de/course/view.php?id=4223 <br>
-http://openbook.rheinwerk-verlag.de/javainsel/
+http://openbook.rheinwerk-verlag.de/javainsel/ <br>
+**[Session.java](/src/main/java/shopping/list/Session.java)**  https://javalin.io/tutorials/jetty-session-handling-java
+
 
 
 
