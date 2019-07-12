@@ -126,6 +126,7 @@ function sendToServer(target, query = '') {
 In der `main.js` wird in der Zeile 37 über die Funktion `sendToServer` ein Request mit dem Namen "listhtml" gestellt welcher den Namen des Zettels an den Server `App.java` übergibt
 und als Response von dem Server das HTML von dem Einkaufszettel erwartet.
 
+
 ##### Request
 
 ```javascript
@@ -256,9 +257,6 @@ app.post("/open", ctx -> {
 });
 ```
 
-
-
-Sobald ein Einkaufszettel erfolgreich geladen wurde, kann man dort beliebig viele Artikel hinzufügen/löschen und diesen Zettel bei belieben 
 
 
 ## Technischer Anspruch (TA) und Umsetzung der Features
