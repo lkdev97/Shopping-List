@@ -43,7 +43,7 @@ function registerHelper(el, event, fnc) {
 }
 
 function addList() {
-    listName = prompt("Geben Sie den Namen ihrer Liste an!");
+    listName = prompt("Geben Sie den Namen von ihrem Einkaufszettel an!");
     sendToServer('/listhtml', "name=" + listName).then((response) => {
         response.text().then(function(responseText) {
             document.getElementById("emotion").insertAdjacentHTML('beforeend', responseText);

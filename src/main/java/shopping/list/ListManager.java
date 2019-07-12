@@ -16,8 +16,8 @@ public class ListManager {
         ShoppingList.remove(id);    
     }
 
-    public static ArrayList<String> getList(int id) {
-        return ShoppingList.get(id);
+    public static HashMap<Integer, ArrayList<String>> getList() {
+        return ShoppingList;
     }
 
     public static int splitId(String id) {
