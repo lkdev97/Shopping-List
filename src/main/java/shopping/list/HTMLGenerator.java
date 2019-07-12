@@ -4,10 +4,6 @@ import java.util.ArrayList;
 
 public class HTMLGenerator {
 
-    static int Counter = 1;
-
-    static Integer last;
-
     public static String getListHTML(String name) {
         StringBuilder listString = new StringBuilder();
 
@@ -16,7 +12,7 @@ public class HTMLGenerator {
         return listString.toString();
     }
 
-    public static String getArticleHTML(String name, int id) {
+    public static String getArticleHTML(String name) {
         //if(name.trim().isEmpty() || ListManager.containsName(id, name)) return "";
         StringBuilder articleHTML = new StringBuilder();
 
@@ -62,7 +58,7 @@ public class HTMLGenerator {
         StringBuilder article = new StringBuilder();
 
         for(int i = 0; i < articles.size(); i++) {
-           article.append(getArticleHTML(articles.get(i), id));
+           article.append(getArticleHTML(articles.get(i)));
         }
 
         return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"

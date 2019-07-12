@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initUI();
     registerEvents();
 
-    window.onload = setupWebSocket;
+   // window.onload = setupWebSocket;
 });
 
 function initUI() {

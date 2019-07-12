@@ -14,28 +14,18 @@ public class App {
             .start(80);
         
         app.post("/listhtml", ctx -> {
-            if(ListManager.getNextId() != 0) {
-                ListManager.addList();
-                ctx.result(HTMLGenerator.getListHTML(ctx.formParam("name")));
-            }
+            ctx.result(ListManager.addList(ctx.formParam("name")));
         });
 
         app.post("/close", ctx -> {
             int id = ListManager.splitId(ctx.formParam("id"));
             ListManager.removeList(id);
-            //ctx.result(Integer.toString(HTMLGenerator.Counter));
         });
 
         app.post("/article", ctx -> {
             int id = ListManager.splitId(ctx.formParam("id"));
             String name = ctx.formParam("name");
-            //            if(!ListManager.containsName(id, name)) -- als test
-            System.out.println("Article");
-            System.out.println(ListManager.getList());
-            if(!ListManager.containsName(id, name)) ctx.result(HTMLGenerator.getArticleHTML(name, id));
-            ListManager.addArticle(id, name);
-            //ctx.result(HTMLGenerator.getArticleHTML(name, id));
-            System.out.println(ListManager.getList());
+            ctx.result(ListManager.addArticle(id, name));
         });
 
         app.post("/save", ctx -> {
@@ -48,22 +38,7 @@ public class App {
         });
 
         app.post("/open", ctx -> {
-            //ctx.result(ListManager.getHTML(Integer.parseInt(ctx.formParam("id"))));
             ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id")), ctx.formParam("name")));
         });
-
-
-        app.ws("/test", ws-> {
-            ws.onConnect(ctx -> {
-                System.out.println("Connect");
-            });
-        });
-       /* app.ws("/memory", ws ->{
-            ws.onConnect(session -> View.showStartMenu(session, 2, Design.Dozent));
-            ws.onMessage(App::handleMessage);
-            ws.onClose((session, statusCode, reason) -> games.remove(session));
-            ws.onError((session, throwable) -> throwable.printStackTrace());
-        }); */
-
     }
 }

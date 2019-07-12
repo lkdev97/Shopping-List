@@ -11,11 +11,13 @@ public class ListManager {
     static int lastSetId;
     //private static Map<Integer, String> ShoppingHTML = new HashMap<>();
 	
-    public static void addList() {
-        if(getListSize() < Counter) {
+    public static String addList(String name) {
+        if(getListSize() < Counter && getNextId() != 0) {
             ArrayList<String> article = new ArrayList<>();
             ShoppingList.put(getNextId(), article);
+            return HTMLGenerator.getListHTML(name);
         }
+        return "";
     }
 
     public static void removeList(int id) {
@@ -39,8 +41,12 @@ public class ListManager {
         return ShoppingList.get(id).contains(name);
     }
 
-    public static void addArticle(int id, String name) {
-        if(!containsName(id, name)) ShoppingList.get(id).add(name);
+    public static String addArticle(int id, String name) {
+        if(!containsName(id, name) && !name.trim().isEmpty()){
+            ShoppingList.get(id).add(name);
+            return HTMLGenerator.getArticleHTML(name);
+        } 
+        return "";
     }
 
     public static void removeArticle(int id, String name) {
