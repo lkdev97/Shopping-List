@@ -116,6 +116,7 @@ In Java werden die Request über Javalin `app.post` angesprochen.
 function sendToServer(target, query = '') {
     return fetch(target, {body: query, method : "POST"}).then(response => response).catch(console.error);
 }
+```
 
 ### 2. Lades des Einkaufszettels (listhtml)
 In der `main.js` wird in der Zeile 37 über die Funktion `sendToServer` ein Request mit dem Namen "listhtml" gestellt welcher den Namen des Zettels an den Server `App.java` übergibt
