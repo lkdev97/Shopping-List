@@ -37,15 +37,16 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
         - [Session Handling](#Session-Handling)
     - [Quellennachweis](#Quellennachweis)
         - [1. Quellen](#1-Quellen)
-  - [Skizzen-Entwürfe der grafischen Oberfläche - Erste Design-Ansätze](#Skizzen-Entw%C3%BCrfe-der-grafischen-Oberfl%C3%A4che---Erste-Design-Ans%C3%A4tze)
+
 
 
 
 ## Kurzbeschreibung inkl. Screenshot
 
-> Jeder kennt es, dass man einkaufen gehen will und man meint, dass man sich alles was man besorgen will merken kann und dann im Nachhinein doch merkt, etwas vergessen zu haben.
-Dafür gibt es Einkaufszettel und diese App ist dafür gedacht, dass man sich digital Einkaufszettel erstellen kann mit allen Artikeln, die man besorgen möchte.
-Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann schnell sehen kann, was man noch einkaufen möchte ohne etliche Papierzettel zu verwenden.
+>Mittels des Programms kann der Nutzer einen bzw. mehrere digitale Einkaufszettel erstellen. Jedem dieser Einkaufszettel kann man frei einen Namen zuweisen. 
+Auserdem kann man jedem Einkaufszettel beliebig viele Artikel zuweisen und nach belieben auch wieder entfernen, sollte man diesen Artikel erworben haben.
+Einkaufszettel kann man speichern und nachträglich erneut öffnen und die dazugehörigen Artikel bearbeiten.
+Sollte man alle Einkäufe von einem Einkaufszettel erledigt haben, kann man diesen dann auch wieder komplett entfernen.
 
 
 
