@@ -14,8 +14,12 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
     - [Aufbau der Anwendung](#Aufbau-der-Anwendung)
     - [Dokumentation des implementierten WebAPIs](#Dokumentation-des-implementierten-WebAPIs)
     - [1. Allgemein](#1-Allgemein)
-    - [2. Requets](#2-Requets)
-    - [3. Response](#3-Response)
+    - [2. Laden des Einkaufszettels (listhtml)](#2-laden-des-einkaufszettels)
+    - [3. Artikel zu dem Einkaufszettel hinzufügen](#3-Artikel-zu-dem-Einkaufszettel-hinzufügen)
+    - [4. Artikel von einem Einkaufszettel entfernen](#4-Artikel-von-einem-Einkaufszettel-entfernen)
+    - [5. Einkaufszettel schließen ohne zu speichern](#5-Einkaufszettel-schließen-ohne-zu-speichern)
+    - [6. Einkaufszettel schließen mit speichern](#6-Einkaufszettel-schließen-mit-speichern)
+    - [7. Einen gespeicherten Einkaufszettel öffnen](#7-Einen-gespeicherten-Einkaufszettel-öffnen)
     - [Technischer Anspruch (TA) und Umsetzung der Features](#Technischer-Anspruch-TA-und-Umsetzung-der-Features)
   - [Quellennachweis](#Quellennachweis)
     - [1. Allgemeine Quellen](#1-Allgemeine-Quellen)
@@ -118,7 +122,7 @@ function sendToServer(target, query = '') {
 }
 ```
 
-### 2. Lades des Einkaufszettels (listhtml)
+### 2. Laden des Einkaufszettels (listhtml)
 In der `main.js` wird in der Zeile 37 über die Funktion `sendToServer` ein Request mit dem Namen "listhtml" gestellt welcher den Namen des Zettels an den Server `App.java` übergibt
 und als Response von dem Server das HTML von dem Einkaufszettel erwartet.
 
