@@ -23,7 +23,6 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
         - [Technischer Anspruch (TA) und Umsetzung der Features](#Technischer-Anspruch-TA-und-Umsetzung-der-Features)
   - [Quellennachweis](#Quellennachweis)
     - [1. Allgemeine Quellen](#1-Allgemeine-Quellen)
-    - [2. Explizite Quellen](#2-Explizite-Quellen)
   - [Skizzen-Entwürfe der grafischen Oberfläche - Erste Design-Ansätze](#Skizzen-Entw%C3%BCrfe-der-grafischen-Oberfl%C3%A4che---Erste-Design-Ans%C3%A4tze)
 
 
