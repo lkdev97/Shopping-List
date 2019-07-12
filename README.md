@@ -44,7 +44,7 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
 ## Kurzbeschreibung inkl. Screenshot
 
 >Mittels des Programms kann der Nutzer einen bzw. mehrere digitale Einkaufszettel erstellen. Jedem dieser Einkaufszettel kann man frei einen Namen zuweisen. 
-Auserdem kann man jedem Einkaufszettel beliebig viele Artikel zuweisen und nach belieben auch wieder entfernen, sollte man diesen Artikel erworben haben.
+Auserdem kann man jedem Einkaufszettel beliebig viele Artikel zuweisen und nach Belieben auch wieder entfernen, sollte man diesen Artikel erworben haben.
 Einkaufszettel kann man speichern und nachträglich erneut öffnen und die dazugehörigen Artikel bearbeiten.
 Sollte man alle Einkäufe von einem Einkaufszettel erledigt haben, kann man diesen dann auch wieder komplett entfernen.
 
