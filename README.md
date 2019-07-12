@@ -88,13 +88,7 @@ Die Tests werden wie folgt ausgeführt: Im Terminal wird auf der Ebene der `List
 
 ### Aufbau der Anwendung 
 
-![](FileTree.png)
-
-Der Projektordner `src` teilt sich, wie auch oben anhand des FileTrees veranschaulicht,
-in zwei weitere Ordner auf: `main` und `test`. <br> Im `test` Ordner befindet sich eine Datei namens `FahrtenbuchTest.java`, diese enthält alle JUnit4 Tests zum Projekt. Nach Ablauf der Tests wird von Gradle ein Bericht über den Ablauf erstellt, welcher unter dem Pfad: `build/reports/tests/test/index.html` als HTML-Dokument zu finden ist. <br>
-Der `main` Ordner enthält den eigentlichen Programmcode der Anwendung im Ordner `java` befinden sich alle `.java` Dateien, der Kern der Anwendung. Die Inhalte aller `.java` Dateien wird in der folgenden Tabelle beschrieben:
-
-<br>
+![Aufbau der Anwendung](screenshots/structure.png)
 
 
 | Datei | Inhalt |
