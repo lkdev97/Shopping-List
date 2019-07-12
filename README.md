@@ -111,9 +111,150 @@ Für die Request wurde die Methode `POST` verwendet.
 
 In Java werden die Request über Javalin `app.post` angesprochen.
 
-### 2. Requests
+Über die `connection.js` wird ein Request wie folgt definiert:
+```javascript
+function sendToServer(target, query = '') {
+    return fetch(target, {body: query, method : "POST"}).then(response => response).catch(console.error);
+}
 
-### 3. Response
+### 2. Lades des Einkaufszettels (listhtml)
+In der `main.js` wird in der Zeile 37 über die Funktion `sendToServer` ein Request mit dem Namen "listhtml" gestellt welcher den Namen des Zettels an den Server `App.java` übergibt
+und als Response von dem Server das HTML von dem Einkaufszettel erwartet.
+
+##### Request
+
+```javascript
+sendToServer('/listhtml', "name=" + listName).then((response) => {
+    response.text().then(function(responseText) {
+        document.getElementById("emotion").insertAdjacentHTML('beforeend', responseText);
+        registerEvents();
+    })
+});
+```
+
+##### Response
+
+```java
+app.post("/listhtml", ctx -> {
+    ctx.result(ListManager.addList(ctx.formParam("name")));
+});
+```
+
+### 3. Artikel zu dem Einkaufszettel hinzufügen
+
+##### Request
+
+```javascript
+me = this;
+sendToServer('/article', "name="+ this.previousSibling.value +"&id=" + this.parentElement.id ).then((response) => {
+    response.text().then(function(responseText) {
+        document.getElementById(me.parentElement.id).insertAdjacentHTML('beforeend', responseText);
+        registerEvents();
+    })
+});
+```
+
+##### Response
+
+```java
+app.post("/article", ctx -> {
+    int id = ListManager.splitId(ctx.formParam("id"));
+    String name = ctx.formParam("name");
+    ctx.result(ListManager.addArticle(id, name));
+});
+```
+
+### 4. Artikel von einem Einkaufszettel entfernen
+
+##### Request
+
+```javascript
+me = this;
+sendToServer('/remove', "id=" + this.parentElement.parentElement.id + "&name=" + this.previousSibling.firstChild.data).then((response) => {
+    me.parentElement.remove();
+})
+```
+
+##### Response
+
+```java
+app.post("/remove", ctx -> {
+    ListManager.removeArticle(ListManager.splitId(ctx.formParam("id")), ctx.formParam("name"));
+});
+```
+
+### 5. Einkaufszettel schließen ohne zu speichern
+
+##### Request
+
+```javascript
+sendToServer('/close', "id=" + this.parentElement.id);
+document.getElementById(this.parentElement.id).remove();
+```
+
+##### Response
+
+```java
+app.post("/close", ctx -> {
+    int id = ListManager.splitId(ctx.formParam("id"));
+    ListManager.removeList(id);
+});
+```
+
+### 6. Einkaufszettel schließen mit speichern
+
+##### Request
+
+```javascript
+me = this;
+sendToServer('/save', "id=" + this.parentElement.id + "&name=" + this.parentElement.children[1].value).then((response) => {
+    response.text().then(function(responseText) {
+        me.parentElement.parentElement.insertAdjacentHTML('afterbegin', responseText);
+        me.parentElement.remove();
+        registerEvents();
+    })
+})
+```
+
+##### Response
+
+```java
+app.post("/save", ctx -> {
+    int id = ListManager.splitId(ctx.formParam("id"));
+    ctx.result(HTMLGenerator.getListOpenHTML(id, ctx.formParam("name")));
+    ctx.sessionAttribute("list", ListManager.getArticlesById(id));
+    ctx.sessionAttribute("id", id);
+    ctx.sessionAttribute("name", ctx.formParam("name"));
+});
+```
+
+### 7. Einen gespeicherten Einkaufszettel öffnen
+
+##### Request
+
+```javascript
+me = this;
+sendToServer('/open', "id=" + this.id + "&name=" + this.innerHTML).then((response) => {
+    response.text().then(function(responseText) {
+        document.getElementById("emotion").insertAdjacentHTML('beforeend', responseText);
+        me.remove();
+        registerEvents();
+    })
+})
+```
+
+##### Response
+
+```java
+app.post("/open", ctx -> {
+    ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id")), ctx.formParam("name")));
+});
+```
+
+
+
+Sobald ein Einkaufszettel erfolgreich geladen wurde, kann man dort beliebig viele Artikel hinzufügen/löschen und diesen Zettel bei belieben 
+
 
 ## Technischer Anspruch (TA) und Umsetzung der Features
 
