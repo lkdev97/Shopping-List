@@ -2,6 +2,7 @@ package shopping.list;
 
 import java.util.*;
 
+
 public class ListManager {
 
     private static HashMap<Integer, ArrayList<String>> ShoppingList = new HashMap<>();
@@ -9,7 +10,6 @@ public class ListManager {
     static int Counter = 5;
 
     static int lastSetId;
-    //private static Map<Integer, String> ShoppingHTML = new HashMap<>();
 	
     public static String addList(String name) {
         if(getListSize() < Counter && getNextId() != 0) {
@@ -78,11 +78,8 @@ public class ListManager {
     public static int getLastSetId() {
         return lastSetId;
     }
-   /* public static void saveHTMLbyId(int id, String html) {
-        ShoppingHTML.put(id, html);
-    }
 
-    public static String getHTML(int id) {
-        return ShoppingHTML.get(id);
-    }*/
+    public static String getListFromSession(ArrayList<String> articles, String name, int id) {
+        return HTMLGenerator.getListHTMLbySession(articles, id, name);
+    }
 }

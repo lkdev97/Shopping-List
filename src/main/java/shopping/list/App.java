@@ -10,6 +10,7 @@ public class App {
 
     public static void main(String[] args) {
         Javalin app = Javalin.create()
+            .sessionHandler(Session::fileSessionHandler)
             .enableStaticFiles("/public")
             .start(80);
         
@@ -31,6 +32,9 @@ public class App {
         app.post("/save", ctx -> {
             int id = ListManager.splitId(ctx.formParam("id"));
             ctx.result(HTMLGenerator.getListOpenHTML(id, ctx.formParam("name")));
+            ctx.sessionAttribute("list", ListManager.getArticlesById(id));
+            ctx.sessionAttribute("id", id);
+            ctx.sessionAttribute("name", ctx.formParam("name"));
         });
  
         app.post("/remove", ctx -> {
@@ -40,5 +44,16 @@ public class App {
         app.post("/open", ctx -> {
             ctx.result(HTMLGenerator.getListHTMLbyId(Integer.parseInt(ctx.formParam("id")), ctx.formParam("name")));
         });
+
+        app.post("/load", ctx -> {
+            try {
+                ctx.result(ListManager.getListFromSession(ctx.sessionAttribute("list"), ctx.sessionAttribute("name"), ctx.sessionAttribute("id")));
+            } catch(NullPointerException e) {
+                System.out.println("Error "+ e);
+            }
+            ctx.req.getSession().invalidate();
+        });
+        
     }
+    
 }

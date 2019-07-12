@@ -33,6 +33,14 @@ public class HTMLGenerator {
         return generateArticleListHTML(id, ListManager.getArticlesById(id), name);
     }
 
+    public static String getListHTMLbySession(ArrayList<String> articles, int id, String name) {
+        StringBuilder sessionHTML = new StringBuilder();
+        
+        sessionHTML.append(generateArticleListHTML(id, articles, name));
+
+        return sessionHTML.toString();
+    }
+
     private static String generateListHTML(int id, String name) {
         return "\t<div id=\"list-"+ id +"\" class=\"shopping-list\">"
                 + "<span id=\"close\" class=\"close\">X</span>"
