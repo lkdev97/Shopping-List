@@ -50,11 +50,7 @@ Diese kann man sich dann ausdrucken oder auf das Handy schicken, damit kann dann
 
 
 
-![Screenshot](InActionCollage.jpg)
-
-<br> 
-
-**Hinweise**: 
+![Screenshot](screenshots/list.png)
 
 
 ---
