@@ -12,6 +12,10 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
     - [Abgabedateien (LOC)](#Abgabedateien-LOC)
     - [Testdateien (TST)](#Testdateien-TST)
     - [Aufbau der Anwendung](#Aufbau-der-Anwendung)
+    - [Dokumentation des implementierten WebAPIs](#Dokumentation-des-implementierten-WebAPIs)
+    - [1. Allgemein](#1-Allgemein)
+    - [2. Requets](#2-Requets)
+    - [3. Response](#3-Response)
     - [Technischer Anspruch (TA) und Umsetzung der Features](#Technischer-Anspruch-TA-und-Umsetzung-der-Features)
   - [Quellennachweis](#Quellennachweis)
     - [1. Allgemeine Quellen](#1-Allgemeine-Quellen)
@@ -96,6 +100,20 @@ Der `main` Ordner enthält den eigentlichen Programmcode der Anwendung im Ordner
 <br> 
 
 Der Ordner `resources` beinhaltet den Code für das GUI (`.html` und `.css`) und die beiden JavaScript Dateien zum Senden von HTTP-Requests und Verarbeiten der HTTP-Responses des Servers. <br>
+
+## Dokumentation des implementierten WebAPIs
+
+### 1. Allgemein
+
+Für die implementierten WebAPIs wurde zum einen JavaScript für die Request
+und Javascript für die Response genommen. Die Funktion für die Javascript Request findet man somit in der `connection.js` die dann in der `main.js` verwendet werden.
+Für die Request wurde die Methode `POST` verwendet.
+
+In Java werden die Request über Javalin `app.post` angesprochen.
+
+### 2. Requests
+
+### 3. Response
 
 ## Technischer Anspruch (TA) und Umsetzung der Features
 
