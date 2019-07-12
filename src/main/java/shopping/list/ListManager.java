@@ -5,11 +5,17 @@ import java.util.*;
 public class ListManager {
 
     private static HashMap<Integer, ArrayList<String>> ShoppingList = new HashMap<>();
+
+    static int Counter = 5;
+
+    static int lastSetId;
     //private static Map<Integer, String> ShoppingHTML = new HashMap<>();
 	
-    public static void addList(int id) {
-        ArrayList<String> article = new ArrayList<>();
-        ShoppingList.put(id, article);
+    public static void addList() {
+        if(getListSize() < Counter) {
+            ArrayList<String> article = new ArrayList<>();
+            ShoppingList.put(getNextId(), article);
+        }
     }
 
     public static void removeList(int id) {
@@ -45,12 +51,26 @@ public class ListManager {
        return ShoppingList.get(id);
     }
 
-    public static int getListSize(int id) {
+    public static int getListSize() {
         return ShoppingList.size();
     }
 
     public static int getNextId() {
-        return 1;
+        for(int i = 1; i < Counter; i++) {
+            if(ShoppingList.get(i) == null) {
+                setLastSetId(i);
+                return i;
+            }
+        } 
+        return 0;
+    }
+    
+    public static void setLastSetId(int id) {
+        lastSetId = id;
+    }
+
+    public static int getLastSetId() {
+        return lastSetId;
     }
    /* public static void saveHTMLbyId(int id, String html) {
         ShoppingHTML.put(id, html);

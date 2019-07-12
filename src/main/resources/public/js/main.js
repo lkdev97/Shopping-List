@@ -1,9 +1,9 @@
-let addListBtn;
+/*let addListBtn;
 let addArticleBtn;
 let shoppingList;
 let saveBtn; 
 let closeBtn;
-let removeBtn;
+let removeBtn;*/
 
 //Startpunkt
 document.addEventListener('DOMContentLoaded', () => {

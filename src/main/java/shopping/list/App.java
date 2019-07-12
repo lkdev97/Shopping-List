@@ -14,13 +14,14 @@ public class App {
             .start(80);
         
         app.post("/listhtml", ctx -> {
-            ctx.result(HTMLGenerator.getListHTML(ctx.formParam("name")));
+            if(ListManager.getNextId() != 0) {
+                ListManager.addList();
+                ctx.result(HTMLGenerator.getListHTML(ctx.formParam("name")));
+            }
         });
 
         app.post("/close", ctx -> {
             int id = ListManager.splitId(ctx.formParam("id"));
-            HTMLGenerator.setLastList(id);
-            HTMLGenerator.undo();
             ListManager.removeList(id);
             //ctx.result(Integer.toString(HTMLGenerator.Counter));
         });
@@ -33,6 +34,7 @@ public class App {
             System.out.println(ListManager.getList());
             if(!ListManager.containsName(id, name)) ctx.result(HTMLGenerator.getArticleHTML(name, id));
             ListManager.addArticle(id, name);
+            //ctx.result(HTMLGenerator.getArticleHTML(name, id));
             System.out.println(ListManager.getList());
         });
 
@@ -42,7 +44,6 @@ public class App {
         });
  
         app.post("/remove", ctx -> {
-            HTMLGenerator.undo();
             ListManager.removeArticle(ListManager.splitId(ctx.formParam("id")), ctx.formParam("name"));
         });
 
