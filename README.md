@@ -12,6 +12,10 @@ Name & Praktikumstermin: Lars Köhler, 5211085 (Fr/2, Kr)
     - [Abgabedateien (LOC)](#Abgabedateien-LOC)
     - [Testdateien (TST)](#Testdateien-TST)
     - [Aufbau der Anwendung](#Aufbau-der-Anwendung)
+    - [Dokumentation des implementierten WebAPIs](#Dokumentation-des-implementierten-WebAPIs)
+    - [1. Allgemein](#1-Allgemein)
+    - [2. Requets](#2-Requets)
+    - [3. Response](#3-Response)
     - [Technischer Anspruch (TA) und Umsetzung der Features](#Technischer-Anspruch-TA-und-Umsetzung-der-Features)
   - [Quellennachweis](#Quellennachweis)
     - [1. Allgemeine Quellen](#1-Allgemeine-Quellen)
@@ -49,6 +53,7 @@ Verlinkter Dateiname | Dateiart | LOC
 **[App.java](/src/main/java/shopping/list/App.java)** | Java | 33
 **[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | Java | 40
 **[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | Java | 74
+**[Session.java](/src/main/java/shopping/list/Session.java)** | Java | 69
 **[connection.js](src/main/resources/public/js/connection.js)** | JavaScript | 3
 **[main.js](src/main/resources/public/js/main.js)** | JavaScript | 80
 **[index.html](src/main/resources/public/index.html)** | HTML | 45
@@ -84,6 +89,7 @@ Der `main` Ordner enthält den eigentlichen Programmcode der Anwendung im Ordner
 **[App.java](/src/main/java/shopping/list/App.java)** | LoremIpsum
 **[ListManager.java](/src/main/java/shopping/list/ListManager.java)** | LoremIpsum
 **[HTMLGenerator.java](/src/main/java/shopping/list/HTMLGenerator.java)** | LoremIpsum
+**[Session.java](/src/main/java/shopping/list/Session.java)** | LoremIpsum
 **[connection.js](src/main/resources/public/js/connection.js)** | LoremIpsum
 **[main.js](src/main/resources/public/js/main.js)** | LoremIpsum
 **[index.html](src/main/resources/public/index.html)** | LoremIpsum
@@ -95,11 +101,26 @@ Der `main` Ordner enthält den eigentlichen Programmcode der Anwendung im Ordner
 
 Der Ordner `resources` beinhaltet den Code für das GUI (`.html` und `.css`) und die beiden JavaScript Dateien zum Senden von HTTP-Requests und Verarbeiten der HTTP-Responses des Servers. <br>
 
+## Dokumentation des implementierten WebAPIs
+
+### 1. Allgemein
+
+Für die implementierten WebAPIs wurde zum einen JavaScript für die Request
+und Javascript für die Response genommen. Die Funktion für die Javascript Request findet man somit in der `connection.js` die dann in der `main.js` verwendet werden.
+Für die Request wurde die Methode `POST` verwendet.
+
+In Java werden die Request über Javalin `app.post` angesprochen.
+
+### 2. Requests
+
+### 3. Response
+
 ## Technischer Anspruch (TA) und Umsetzung der Features
 
 Ich habe folgende Features verwendet. Die verlinkte Datei zeigt beispielhaft den Einsatz dieses Features in den angegebenen Zeilen im Quellcode.
 
 1. Bootstrap. **[index.html](src/main/resources/public/index.html)** (13-41)
+2. Session Handling **[Session.java](src/main/java/public/Session.java)**
 
 <Ihre Dokumentation zu den Features>
 
@@ -113,7 +134,9 @@ https://stackoverflow.com/ <br>
 https://javalin.io/documentation <br>
 https://javalin.io/tutorials/ <br>
 <br>https://moodle.thm.de/course/view.php?id=4223 <br>
-http://openbook.rheinwerk-verlag.de/javainsel/
+http://openbook.rheinwerk-verlag.de/javainsel/ <br>
+**[Session.java](/src/main/java/shopping/list/Session.java)**  https://javalin.io/tutorials/jetty-session-handling-java
+
 
 
 
