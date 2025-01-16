@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/all.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Einkaufszettel</title>
+</head>
+<body>
+    <header>     
+        <div class="container">
+            <h1>Einkaufszettel</h1>
+
+            <div class="nav-bar">
+                <span>Sie können 4 Einkaufszettel erstellen!</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container main-wrapper">
+        <div id="emotion" class="emotion--sizer-xl col--1" data-rows="33" style="height: 2310px;">
+            <div class="add-list-box">
+                <span>Neuen Einkaufszettel hizufügen</span>
+                <button id="add-list" type="button" class="btn btn-light">+</button>
+            </div>
+            <div id="list-0" class="shopping-list is--hidden">
+                <span id="close">X</span>
+                <input id="list-name" placeholder="Name des Einkaufszettels">
+                <button id="add-article" type="button" class="btn btn-secondary">+</button>
+                <button id="save" type="button" class="btn btn-success save">Speichern</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="js/main.js"></script>
+<script src="js/connection.js"></script>

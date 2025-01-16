@@ -1,0 +1,11 @@
+body {
+    background: var(--main-default-theme);
+}
+
+.is--hidden {
+    display: none !important;
+}
+
+.error-text {
+    color: red;
+}

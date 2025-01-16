@@ -1,0 +1,71 @@
+body {
+    background: var(--main-default-theme);
+}
+
+.is--hidden {
+    display: none !important;
+}
+
+.error-text {
+    color: red;
+}
+
+.main-wrapper {
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.nav-bar {
+    text-align: right;
+}
+
+header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.shopping-list {
+    border: 1px solid;
+    padding: 50px;
+    margin-bottom: 5px;
+    position: relative;
+    /*width: 49%;
+    float: left; */ 
+    margin-right: 5px;
+}
+
+#close {
+    color: red;
+    float: right;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.remove {
+    color: red;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    cursor: pointer;
+}
+
+.save {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#list-name {
+    display: block;
+}
+
+.article-box {
+    background: var(--article-box-background);
+    position: relative;
+}
+
+.add-list-box {
+    display: block;
+    text-align: center;
+}
